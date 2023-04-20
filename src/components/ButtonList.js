@@ -6,7 +6,7 @@ const list =["Cooking", "Live", "Gaming", "Soccer", "Stocks", "Podcasts"]
 export const ButtonList = () => {
   return (
     <div className='flex'>
-    {list.map((obj) => <Button name={obj} />)}    
+    {list.map((obj) => <Button key={obj} name={obj} />)}    
     </div>
   
   )

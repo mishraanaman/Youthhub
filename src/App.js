@@ -30,7 +30,7 @@ function App() {
     <Provider store={store}>
       <>
         <Header />
-        <RouterProvider router={appRouter} />    </>
+        <RouterProvider router={appRouter} /></>
     </Provider>
 
   );
