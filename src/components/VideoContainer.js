@@ -21,7 +21,7 @@ const [videos, setVideos] = useState([])
 
   return (
     <div className='flex flex-wrap'>
-    {videos && videos.length !=0 && videos.map((video)=><Link to={"/watch?v="+video.id} key={video.id}><div><VideoCard info={video}/></div></Link>)}
+    {videos && videos.length !==0 && videos.map((video)=><Link to={"/watch?v="+video.id} key={video.id}><div><VideoCard info={video}/></div></Link>)}
     </div>
     
   )

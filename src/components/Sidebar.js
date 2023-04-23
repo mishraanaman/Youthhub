@@ -9,28 +9,27 @@ const Sidebar = () => {
   if(!isMenuOpen){return null}
 
   return (
-    <div className= "p-5 shadow-lg h-screen">
+    
+    <div className= "p-5 shadow-lg h-screen" style={{ width: "300px" }}>
         <ul>
             <li><Link to="/">Home</Link></li>
-            <li>Shorts</li>
-            <li>Videos</li>
-            <li>Live</li>
+            <li><Link to="/shorts">Shorts</Link></li>
+            <li>Subscriptions</li>
+            <li>-------------</li>
+            <li>Library</li>
+            <li>History</li>
+            <li>Watch Later</li>
+            <li>Liked Videos</li>
         </ul>
-        <h1 className="font-bold pt-5"> Subscriptions</h1>
+        <h1 className="font-bold pt-5">Subscriptions</h1>
         <ul>
-            <li>Music</li>
-            <li>Sports</li>
-            <li>Gaming</li>
-            <li>Movies</li>
-        </ul>
-        <h1 className="font-bold pt-5"> Watch Later</h1>
-        <ul>
-            <li>Music</li>
-            <li>Sports</li>
-            <li>Gaming</li>
-            <li>Movies</li>
+            <li>FC Barcelona</li>
+            <li>F1</li>
+            <li>Prasar Bharti</li>
+
         </ul>
     </div>
+    
   )
 }
 

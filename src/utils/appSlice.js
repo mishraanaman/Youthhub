@@ -10,7 +10,7 @@ const appSlice = createSlice({
     reducers:{
         toggleMenu:(state)=> {state.isMenuOpen = !state.isMenuOpen},
         closeMenu: (state)=> {state.isMenuOpen = false},
-        toggleDarkMode:(state)=> {state.isDarkMode =!state.isMenuOpen}
+        toggleDarkMode:(state)=> {state.isDarkMode = !state.isMenuOpen}
     }
 })
 
