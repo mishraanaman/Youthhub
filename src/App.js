@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import MainContainer from './components/MainContainer';
 import WatchPage from './components/WatchPage';
 import Shorts from './components/Shorts';
+import ThemeContextProvider from './components/ThemeContextProvider';
 
 const appRouter = createBrowserRouter([
   {
@@ -31,12 +32,14 @@ const appRouter = createBrowserRouter([
 
 function App() {
   return (
+    <ThemeContextProvider>
+
     <Provider store={store}>
-      <>
         <Header />
         <RouterProvider router={appRouter} />
-      </>
     </Provider>
+    </ThemeContextProvider>
+
 
   );
 }
