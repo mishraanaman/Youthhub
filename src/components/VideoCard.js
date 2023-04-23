@@ -6,10 +6,10 @@ const VideoCard = ({info}) => {
 
 
   return (
-    <div className='p-2 m-2 w-80 shadow-lg'>
+    <div className='p-2 m-2 w-80 h-70 shadow-lg'>
         <img className="rounded-lg" alt='thumbnail' src={thumbnails.high.url}/>
         <ul>
-            <li className='font-bold'>{title}</li>
+            <li className='font-bold break-words'>{title}</li>
             <li>{channelTitle}</li>
             <li>{statistics.viewCount} views</li>
 

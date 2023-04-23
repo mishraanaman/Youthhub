@@ -9,6 +9,7 @@ const Subscriptions = () => {
   const getSubscriptions= async ()=>{
     const data= await  fetch(YOUTUBE_SUBSRCRIPTIONS_API+MY_API_KEY)
     const json = data.json();
+    console.log({json})
   }
   return (
     <div>Subscriptions</div>

@@ -9,6 +9,7 @@ import MainContainer from './components/MainContainer';
 import WatchPage from './components/WatchPage';
 import Shorts from './components/Shorts';
 import ThemeContextProvider from './components/ThemeContextProvider';
+import Subscriptions from './components/Subscriptions';
 
 const appRouter = createBrowserRouter([
   {
@@ -25,6 +26,9 @@ const appRouter = createBrowserRouter([
       },{
         path: "/shorts",
         element: <Shorts/>
+      },{
+        path: "/subscriptions",
+        element: <Subscriptions/>
       },
     ]
   }
