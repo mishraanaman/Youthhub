@@ -1,38 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { toggleMenu } from '../utils/appSlice'
 import { useDispatch } from 'react-redux'
-import { YOUTUBE_SEARCH_API } from '../utils/constant';
 import ProfileDropDown from './ProfileDropDown.js'
 import Search from './Search';
 import { useTheme } from '../utils/helper';
 
 const Header = () => {
 
-    const [searchQuery, setSearchQuery] = useState("");
-    const [suggestions, setSuggestions] = useState([]);
-    const [showSuggestions, setShowSuggestions] = useState(true);
     const { darkMode, toggleDarkMode } = useTheme();
-
-    
-    useEffect(()=>{
-
-        //Debouncing
-        //make an API call after every key press
-        //but if the difference between 2 APIs is lesss than 200ms
-        //decline the API call
-        const timer = setTimeout(()=>getSearchSuggestions(),200)
-
-
-        return ()=>{
-            clearTimeout(timer)
-        }
-    }, [searchQuery])
-
-    const getSearchSuggestions = async ()=>{
-        const data = await fetch(YOUTUBE_SEARCH_API+searchQuery);
-        const json = data.json();
-        setSuggestions(json)
-    }
 
     const dispatch = useDispatch();
 
@@ -48,8 +23,8 @@ const Header = () => {
                    <a href="/"><img className="ml-2 mr-0 mt-0 mb-4 w-30 h-16" alt="logo" src='https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo.png' /></a> 
                 </div>
                 
-                <div className="search flex h-8">
-                   <Search setSearchQuery={setSearchQuery}/>                
+                <div className="search">
+                   <Search/>                
                 </div>
                 
                 <div className="user info">

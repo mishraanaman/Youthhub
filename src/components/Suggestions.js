@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
-const Suggestions = () => {
-  return (
+const Suggestions = ({ search, showSuggestions }) => {
 
-    <div className='absolute'>
-    <h1>Iphone 14</h1>
-    <h1>Iphone 14 s</h1>
-    <h1>Iphone 13</h1>
-    <h1>Iphone vs</h1>
-   </div>  )
-}
+  const [suggestions, setSuggestions] = useState('');
 
-export default Suggestions
+  useEffect(()=>{
+   getSearchSuggestions()
+  },[search])
+
+  const getSearchSuggestions = async()=>{
+    const data = await fetch('https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q='+search)
+    const json = await data.json();
+    setSuggestions(json[1]);
+
+    console.log({suggestions})
+  }
+
+  return (showSuggestions && suggestions? 
+    <div className='absolute flex flex-wrap'> {suggestions.map((item)=><h1>{item}</h1>)}</div>
+   : null)
+
+};
+
+export default Suggestions;
