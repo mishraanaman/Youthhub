@@ -19,22 +19,22 @@ const Sidebar = () => {
 
   return (
     
-    <div id="side-bar" className= {`p-5 shadow-lg h-screen overflow-hidden ${darkMode ? 'bg-black text-white' : 'bg-white text-gray-800'}`} style={{ width: "300px" }}>
+    <div id="side-bar text-2xl m-2" className= {`p-5 shadow-lg h-screen overflow-hidden ${darkMode ? 'bg-black text-white' : 'bg-white text-gray-800'}`} style={{ width: "300px" }}>
         <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/shorts">Shorts</Link></li>
-            <li><Link to="/subscriptions">Subscriptions</Link></li>
+            <li className='py-2'><Link to="/">Home</Link></li>
+            <li className='py-2'><Link to="/shorts">Shorts</Link></li>
+            <li className='py-2'><Link to="/subscriptions">Subscriptions</Link></li>
             <li>-------------</li>
-            <li>Library</li>
-            <li>History</li>
-            <li>Watch Later</li>
-            <li>Liked Videos</li>
+            <li  className='py-2'>Library</li>
+            <li  className='py-2'>History</li>
+            <li  className='py-2'>Watch Later</li>
+            <li  className='py-2'>Liked Videos</li>
         </ul>
-        <h1 className="font-bold pt-5">Subscriptions</h1>
+        <h1 className="font-bold pt-5  className='py-2'">Subscriptions</h1>
         <ul>
-            <li>FC Barcelona</li>
-            <li>F1</li>
-            <li>Prasar Bharti</li>
+            <li  className='py-2'>FC Barcelona</li>
+            <li  className='py-2'>F1</li>
+            <li  className='py-2'>Prasar Bharti</li>
 
         </ul>
     </div>
