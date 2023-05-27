@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { toggleMenu } from '../utils/appSlice'
 import { useDispatch } from 'react-redux'
 import ProfileDropDown from './ProfileDropDown.js'
@@ -7,7 +7,7 @@ import { useTheme } from '../utils/helper';
 
 const Header = () => {
 
-    const { darkMode, toggleDarkMode } = useTheme();
+    const { darkMode } = useTheme();
 
     const dispatch = useDispatch();
 
